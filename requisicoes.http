@@ -1,0 +1,31 @@
+### Listar
+GET http://localhost:8080/funcionarios
+Accept: application/json
+
+### Cadastrar
+POST http://localhost:8080/funcionarios
+Content-Type: application/json
+Accept: application/json
+
+{"nome": "Bruno Souza", "cargo": "Desenvolvedor", "salario": 3500.0}
+
+### Buscar por ID
+GET http://localhost:8080/funcionarios/1
+
+### Filtrar
+GET http://localhost:8080/funcionarios?cargo=desenvolvedor
+
+### Atualizar (todos os campos)
+PUT http://localhost:8080/funcionarios/1
+Content-Type: application/json
+
+{"nome": "Bruno Souza Atualizado", "cargo": "Desenvolvedor", "salario": 3500.0}
+
+### Excluir
+DELETE http://localhost:8080/funcionarios/1
+
+### Inválido: 400
+POST http://localhost:8080/funcionarios
+Content-Type: application/json
+
+{}
